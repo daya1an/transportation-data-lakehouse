@@ -1,3 +1,4 @@
+```markdown
 # Enterprise mobility data lakehouse
 
 ## What this project does
@@ -20,33 +21,35 @@ Think of a city's ride hailing service. Every trip, every rating, every pickup g
 
 Raw files arrive and move through three clean up stages before reaching dashboards.
 
+```
 Raw trip files (S3)
-                │
-                ▼
-┌─────────────────────────────────┐
-│           BRONZE LAYER          │
-│   Save everything exactly as it │
-│   arrives. Nothing deleted.     │
-└─────────────────────────────────┘
-                │
-                ▼
-┌─────────────────────────────────┐
-│           SILVER LAYER          │
-│   Clean data, fix mistakes,     │
-│   update changed records        │
-└─────────────────────────────────┘
-                │
-                ▼
-┌─────────────────────────────────┐
-│            GOLD LAYER           │
-│   Join everything into one big  │
-│   ready to use table            │
-└─────────────────────────────────┘
-                │
-        ┌───────┼───────┐
-        ▼       ▼       ▼
-    Jaipur    Kochi    Surat
-   dashboard dashboard dashboard
+        │
+        ▼
+┌───────────────────────────────┐
+│          BRONZE LAYER           │
+│  Save everything exactly as it  │
+│  arrives. Nothing deleted.      │
+└───────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────┐
+│          SILVER LAYER           │
+│  Clean data, fix mistakes,      │
+│  update changed records         │
+└───────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────┐
+│           GOLD LAYER            │
+│  Join everything into one big   │
+│  ready to use table             │
+└───────────────────────────────┘
+        │
+    ┌───┼───┐
+    ▼   ▼   ▼
+ Jaipur Kochi Surat
+dashboard dashboard dashboard
+```
 
 🥉 **Bronze (raw stage)**
 Everything gets saved exactly as it came in. Nothing is deleted or changed here. This is the safety net, the original copy.
@@ -64,3 +67,6 @@ All the cleaned pieces get joined together into one easy to read table. Then it 
 ⚙️ **Databricks Delta Live Tables** — runs the whole pipeline automatically
 ☁️ **AWS S3** — where raw files are stored
 📈 **Databricks SQL** — where reports and dashboards connect
+```
+
+Wrap the diagram block in triple backticks in your actual README so the alignment stays fixed (markdown renderers reflow plain text otherwise).
