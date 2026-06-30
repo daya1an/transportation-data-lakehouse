@@ -48,7 +48,6 @@ Raw trip files (S3)
     ▼   ▼   ▼
  Jaipur Kochi Surat
 dashboard dashboard dashboard
-```
 
 🥉 **Bronze (raw stage)**
 Everything gets saved exactly as it came in. Nothing is deleted or changed here. This is the safety net, the original copy.
