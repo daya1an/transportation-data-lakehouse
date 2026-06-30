@@ -33,7 +33,11 @@ Raw files arrive and move through three clean up stages before reaching dashboar
 ## What it's built with
 
 🔧 **PySpark** — does the heavy lifting of processing data
+
 💾 **Delta Lake** — stores data safely and lets you look back at past versions
+
 ⚙️ **Databricks Delta Live Tables** — runs the whole pipeline automatically
+
 ☁️ **AWS S3** — where raw files are stored
+
 📈 **Databricks SQL** — where reports and dashboards connect
