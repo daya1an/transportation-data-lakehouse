@@ -1,4 +1,3 @@
-```markdown
 # Enterprise mobility data lakehouse
 
 ## What this project does
@@ -21,7 +20,7 @@ Think of a city's ride hailing service. Every trip, every rating, every pickup g
 
 Raw files arrive and move through three clean up stages before reaching dashboards.
 
-```
+
 Raw trip files (S3)
         │
         ▼
@@ -67,6 +66,3 @@ All the cleaned pieces get joined together into one easy to read table. Then it 
 ⚙️ **Databricks Delta Live Tables** — runs the whole pipeline automatically
 ☁️ **AWS S3** — where raw files are stored
 📈 **Databricks SQL** — where reports and dashboards connect
-```
-
-Wrap the diagram block in triple backticks in your actual README so the alignment stays fixed (markdown renderers reflow plain text otherwise).
