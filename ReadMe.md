@@ -20,43 +20,15 @@ Think of a city's ride hailing service. Every trip, every rating, every pickup g
 
 Raw files arrive and move through three clean up stages before reaching dashboards.
 
+1. **Raw trip files land in S3** — trip records, city info, and dates arrive as plain files.
 
-Raw trip files (S3)
-        │
-        ▼
-┌───────────────────────────────┐
-│          BRONZE LAYER           │
-│  Save everything exactly as it  │
-│  arrives. Nothing deleted.      │
-└───────────────────────────────┘
-        │
-        ▼
-┌───────────────────────────────┐
-│          SILVER LAYER           │
-│  Clean data, fix mistakes,      │
-│  update changed records         │
-└───────────────────────────────┘
-        │
-        ▼
-┌───────────────────────────────┐
-│           GOLD LAYER            │
-│  Join everything into one big   │
-│  ready to use table             │
-└───────────────────────────────┘
-        │
-    ┌───┼───┐
-    ▼   ▼   ▼
- Jaipur Kochi Surat
-dashboard dashboard dashboard
+2. 🥉 **Bronze layer (raw stage)** — everything gets saved exactly as it came in. Nothing is deleted or changed here. This is the safety net, the original copy.
 
-🥉 **Bronze (raw stage)**
-Everything gets saved exactly as it came in. Nothing is deleted or changed here. This is the safety net, the original copy.
+3. 🥈 **Silver layer (cleaned stage)** — typos in column names get fixed, invalid ratings get removed, and if a trip record changes, the old version gets updated instead of duplicated. A calendar table (with holidays marked) also gets built here.
 
-🥈 **Silver (cleaned stage)**
-Now the cleanup happens. Typos in column names get fixed, invalid ratings get removed, and if a trip record changes, the old version gets updated instead of duplicated. A calendar table (with holidays marked) also gets built here.
+4. 🥇 **Gold layer (ready stage)** — all the cleaned pieces get joined together into one easy to read table.
 
-🥇 **Gold (ready stage)**
-All the cleaned pieces get joined together into one easy to read table. Then it gets split city by city, so each region gets its own dashboard ready dataset.
+5. 🏙️ **City dashboards** — the gold table gets split city by city (Jaipur, Kochi, Surat and others), so each region gets its own dashboard ready dataset.
 
 ## What it's built with
 
