@@ -1,6 +1,3 @@
-Replace it with this more recruiter-friendly README. It includes dedicated spaces for pipeline screenshots.
-
-```markdown
 # Transportation Data Lakehouse
 
 A Databricks Medallion lakehouse that transforms ride-hailing data from AWS S3 into reliable, city-level datasets for operational reporting and business analytics across India.
