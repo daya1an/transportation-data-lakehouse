@@ -46,26 +46,6 @@ City-level reporting datasets and Databricks SQL dashboards
 5. **City-level analytics**  
    Gold datasets are organized by city, enabling teams in Jaipur, Kochi, Surat, and other locations to analyze relevant local operations.
 
-## Technology stack
-
-| Area | Technologies |
-| --- | --- |
-| Data platform | Databricks, Spark Declarative Pipelines |
-| Processing | Apache Spark, PySpark, SQL |
-| Storage | Delta Lake, AWS S3 |
-| Ingestion | Auto Loader, incremental batch processing |
-| Analytics | Databricks SQL, Gold-layer views |
-
-## Repository structure
-
-```text
-├── src/                  # PySpark and SQL pipeline logic
-├── notebooks/            # Databricks notebooks, if applicable
-├── docs/images/          # Pipeline and dashboard screenshots
-├── data/                 # Sample or reference data
-└── README.md
-```
-
 ## Business value
 
 The lakehouse converts raw ride-hailing events into governed, query-ready data. This reduces repetitive data preparation and gives city teams a consistent foundation for operational analysis, trip trends, and service-quality reporting.
