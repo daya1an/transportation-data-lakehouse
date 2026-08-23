@@ -29,6 +29,15 @@ City-level reporting datasets and Databricks SQL dashboards
 
 <img width="1536" height="772" alt="image" src="https://github.com/user-attachments/assets/25bcc446-1bd5-42a0-9fe4-636d105f8ecd" />
 
+## Why SCD Type 1 ?
+
+For this project, SCD Type 1 is the better choice if the Silver trips table is meant to show the latest corrected trip state for dashboards and operational analytics.
+Why:
+- Trips are generally fact records, not slowly changing dimensions.
+- Your Gold views need the current fare, rating, city, and distance, not multiple historical versions of one trip.
+- Your source lacks a business update timestamp or version field, which is important for trustworthy Type 2 sequencing.
+- Bronze already preserves raw ingested data, providing a basic audit and replay layer.
+
 ## Data flow
 
 1. **Ingest from AWS S3**  
