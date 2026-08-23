@@ -49,4 +49,3 @@ City-level reporting datasets and Databricks SQL dashboards
 ## Business value
 
 The lakehouse converts raw ride-hailing events into governed, query-ready data. This reduces repetitive data preparation and gives city teams a consistent foundation for operational analysis, trip trends, and service-quality reporting.
-```
