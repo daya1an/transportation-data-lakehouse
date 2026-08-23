@@ -27,7 +27,7 @@ City-level reporting datasets and Databricks SQL dashboards
 
 ## Pipeline screenshots
 
-<img width="1031" height="499" alt="image" src="https://github.com/user-attachments/assets/3f0c4d24-eee1-4298-97e5-e89055273dfd" />
+<img width="1536" height="772" alt="image" src="https://github.com/user-attachments/assets/3d84edea-8dc5-488e-9bda-4ab4eaf487a8" />
 
 ## Data flow
 
