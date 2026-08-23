@@ -55,6 +55,22 @@ Why:
 5. **City-level analytics**  
    Gold datasets are organized by city, enabling teams in Jaipur, Kochi, Surat, and other locations to analyze relevant local operations.
 
+## Export the views to CSV
+_(currently not present)_
+
+```python
+export_path = "s3://goodcabs-data-daya1an/exports/fact_trips_csv"
+
+(
+    spark.table("transportation.gold.fact_trips")
+    .write
+    .mode("overwrite")
+    .option("header", "true")
+    .option("delimiter", ",")
+    .csv(export_path)
+)
+```
+
 ## Business value
 
 The lakehouse converts raw ride-hailing events into governed, query-ready data. This reduces repetitive data preparation and gives city teams a consistent foundation for operational analysis, trip trends, and service-quality reporting.
