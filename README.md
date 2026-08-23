@@ -59,7 +59,7 @@ Why:
 _(currently not present)_
 
 ```python
-export_path = "s3://goodcabs-data-daya1an/exports/fact_trips_csv"
+export_path = "s3://my-s3-bucket/exports/fact_trips_csv"
 
 (
     spark.table("transportation.gold.fact_trips")
